@@ -1,0 +1,13 @@
+[class*="container"] {
+    border: 2px solid black;
+
+}
+
+[class*="row"]{
+    border: 2px solid rgb(255, 3, 3);
+
+}
+
+[class*="col"]{
+    border: 2px solid rgb(41, 3, 252);
+}

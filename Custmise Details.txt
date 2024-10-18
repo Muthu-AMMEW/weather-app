@@ -9,6 +9,10 @@ create project folder with correct name
 ------Added Files----------
 ./public/bootstrap-5.3.3 //souce files
 
+./public/created development folder ----> added below files
+breakPointsFinder.css
+layoutFinder.css
+
 
 ------Added Codes-----------
 ./gitignore /*
