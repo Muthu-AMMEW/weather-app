@@ -2,6 +2,6 @@
     outline: none;
 }
 .bg-image{
-    background-image: url("../public/background-pic.jpg");
+    background-image: url("../public/pictures/background-pic.jpg");
     background-position: cover;
 }
