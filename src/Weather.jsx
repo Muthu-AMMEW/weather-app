@@ -1,7 +1,7 @@
 import './Weather.css';
 import WeatherDetails from './WeatherDetails';
 import { useState, useEffect } from "react";
-import axios from 'axios'
+// import axios from 'axios'
 
 // pictures
 
@@ -58,9 +58,9 @@ export default function Weather() {
     setLoading(true);
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${api_key}&units=Metric`;
     try {
-      let res = await axios.get(url);
-      let data = await res.data;
-      //console.log(data);
+      let res = await fetch(url);
+      let data = await res.json();
+      
       if (data.cod === "404") {
         console.error("City not found");
         setCityNotFound(true);
@@ -75,11 +75,11 @@ export default function Weather() {
       setLat(data.coord.lat);
       setLog(data.coord.lon);
       const weatherIconCode = data.weather[0].icon;
-      setIcon(weatherIconMap[weatherIconCode] || p01d);
+      setIcon(weatherIconMap[weatherIconCode]);
       setCityNotFound(false);
     } catch (error) {
       console.error("An error occurred:", error.message);
-      setError("An error ror occurred while fetching weather data.");
+      setError("An error occurred while fetching weather data.");
     } finally {
       setLoading(false);
     }
