@@ -60,7 +60,7 @@ export default function Weather() {
     try {
       let res = await fetch(url);
       let data = await res.json();
-      
+
       if (data.cod === "404") {
         console.error("City not found");
         setCityNotFound(true);
@@ -100,10 +100,10 @@ export default function Weather() {
     <>
       <div className="row min-vw-100 min-vh-100 justify-content-center align-items-center bg-info-subtle bg-image">
         <div className="col-11 col-sm-8 col-md-7 col-lg-6 col-xl-5">
-          
+
           <div className="bg-white d-flex flex-column justify-content-center align-items-center w-100 rounded-5">
 
-          <div className='text-center text-success h2 mt-2'>Weather Report</div>
+            <div className='text-center text-success h2 mt-2'>Weather Report</div>
 
             <div className="d-flex form-control border-danger w-75 m-3">
               <input className="mm-inputfocus flex-grow-1 border-0" type="text" id="" placeholder="Enter City Name" onChange={e => setText(e.target.value)} value={text} onKeyDown={handleKeyDown} />
@@ -118,7 +118,7 @@ export default function Weather() {
 
 
 
-            <p>Designed by <a href="https://www.linkedin.com/in/muthu-ammew" className="text-success text-decoration-none fw-bolder">Muthu</a></p>
+            <a href="https://www.linkedin.com/in/muthu-ammew" className="text-black text-decoration-none">Designed by <span className="text-success text-decoration-underline fw-bolder">Muthu</span></a>
           </div>
         </div>
       </div>
